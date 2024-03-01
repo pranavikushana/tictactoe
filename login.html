@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://127.0.0.1:5500/demo/index.html">
+    <title>Login Page</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(169, 214, 214);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+        .form{
+            width: 350px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            flex-direction: column; 
+            padding: 30px;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        .user img{
+            width: 50px;
+        }
+
+        .field{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .field input {
+            width: 100%;
+            outline: none;
+            border: 2px solid #b6c9c6;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        input:focus{
+            border-color: #5d61e7;
+        }
+
+        button{
+            border: none;
+            outline: none;
+            background-color: #4c8cd0;
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        button:hover {
+            opacity: 1.2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="user">
+            <img src="./user.png" alt="">
+        </div>
+    
+        <div class="field">
+        <label>Email</label>
+        <input type="text" placeholder="abc@gmail.com">
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="********">
+        </div>
+
+        <a href="http://127.0.0.1:5500/tictactoe/index.html"></a>
+        <button onclick="gotoLink(this)" value="http://127.0.0.1:5500/tictactoe/index.html">Login</button>
+    </div>
+
+<script>
+
+    function gotoLink(link){
+    console.log(link.value);
+    //location.href = link.value;
+    window.open(link.value);    
+    }
+
+</script>
+    
+</body>
+</html>
